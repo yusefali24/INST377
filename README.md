@@ -1,6 +1,6 @@
-INST377 Dynamic Web Applications (Fall 2017)
+INST377 Dynamic Web Applications (Fall 2018)
 ==============
-Myeong Lee, iSchool, University of Maryland
+Donal Heidenblad, iSchool, University of Maryland
 --------------
 
 This repo provides course materials about Git for the INST 377 class.
@@ -13,4 +13,4 @@ Most of the course slides are available on ELMS.
 #### [Link to the introduction to Git](git/) 
 #### [Link to the introduction to JavaScript](javascript/) 
 
-If you have any questions, contact Myeong Lee (myeong@umd.edu).  
+If you have any questions, contact Donal Heidenblad (dheidenb@umd.edu).  
