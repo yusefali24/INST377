@@ -1,3 +1,0 @@
-Chelsea Readme file.  
-sup.
-
