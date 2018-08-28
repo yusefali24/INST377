@@ -48,7 +48,7 @@ We will use [Github](http://github.com) in this session since it is most widely 
 1. Branching
 	- For a Git repository, it's possible to make other branches so to keep the original codebase (useful when developing a particular feature while not wanting to break the original code).
 2. Forking
-	- If you're interested in an existing (public) project by other users, you can "folk" the project to your account. This copies the entire project to your own account so you can work freely on it. 
+	- If you're interested in an existing (public) project by other users, you can "fork" the project to your account. This copies the entire project to your own account so you can work freely on it. 
 3. Basic Website
 	- Github provides a functionality that you can create a simple website that directly uses code on your Git repo.
 	- The URL convention is `http://[title].github.io`
