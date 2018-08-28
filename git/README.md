@@ -230,26 +230,26 @@ Type `git remote add upstream https://github.com/donalus/INST377.git`
 For your own project, you normally use `commit` and `push` to manage your code, and you many not use other commands that much. However, Git is often used for collaboration with other colleagues. Let's do some exercises on collaborating with your friend. 
 
 1. Pair up with a colleague next to you. On the browser, go to your friend's Git repo page by typing your friend's Git repo URL. For example, you may go to `https://github.com/donalus/INST377`
-2. Click the "Fofk" button at the top. 
-3. Once you folk your friend's repo, you just copied your friend's precious project to your account. 
-4. Go to your folked repo page (you can see it in your repo list on your main Git page).
+2. Click the "Fork" button at the top. 
+3. Once you fork your friend's repo, you just copied your friend's precious project to your account. 
+4. Go to your forked repo page (you can see it in your repo list on your main Git page).
 5. Go to the terminal, get out of your original repo folder. For example: 
 
 	```
 	cd ..
 	```
-6. Clone your folked repo to your computer. The steps are same to before, but just the address of the repo is different. If not sure, follow the steps in [Cloning a Git Repo](#clone).
-7. Get into the cloned repo folder. Remember, this is a repo "folked" from your friend's account. 
+6. Clone your forked repo to your computer. The steps are same to before, but just the address of the repo is different. If not sure, follow the steps in [Cloning a Git Repo](#clone).
+7. Get into the cloned repo folder. Remember, this is a repo "forked" from your friend's account. 
 
 	```
-	cd [name of the folked repo]
+	cd [name of the forked repo]
 	```
-8. In the folked folder, there is a file that your friend created. Let's create another file. 	
-	- Open your text editor, create a new file, write something in it, and save it in the folked repo folder with your name (e.g., `[your_name].md`).
+8. In the forked folder, there is a file that your friend created. Let's create another file. 	
+	- Open your text editor, create a new file, write something in it, and save it in the forked repo folder with your name (e.g., `[your_name].md`).
 	- Add, commit, and push your change. 
-	- Once pushing your changes, your file is uploaded to your folked Git repo, not your friend's repo. But you want to give your changes to your friend.
-9. Go to the web page of your folked repo. There is a button called "New Pull Request". Click it. 
-10. You will see "base fork" and "head fork" in the web page. "Base fork" is the original repo that you want to contribute to (in this case, your friend's repo). "Head fork" is your folked repo that you just made changes. You are basically trying to ask your friend to merge your changes.
+	- Once pushing your changes, your file is uploaded to your forked Git repo, not your friend's repo. But you want to give your changes to your friend.
+9. Go to the web page of your forked repo. There is a button called "New Pull Request". Click it. 
+10. You will see "base fork" and "head fork" in the web page. "Base fork" is the original repo that you want to contribute to (in this case, your friend's repo). "Head fork" is your forked repo that you just made changes. You are basically trying to ask your friend to merge your changes.
 11. If you see the "Create Pull Request" button (in green), click it. Then, you can write down a message about your contribution. Once you make a pull-request, your friend will receive the request from his or her email or on the Github website. **Now, as a contributor, your work is done.** 
 12. As an original project owner, you receive a pull request from your friend. In your original project repo page, you can see there is one pull request. Click "Pull requests" menu. 
 13. You can see your friend's message. If you have any opinion, you can comment on it as well. This conversation can go on as a thread. Once you're satisfied with your friend's contribution, click the `Merge Pull Request` button. Don't click `Comment and Close` button unless you don't want to merge it. Subsequenlty, it is possible that you need to click `Confirm merge` to complete the merge. 
@@ -258,7 +258,7 @@ For your own project, you normally use `commit` and `push` to manage your code, 
 ### Pulling Your Repo (Github &rarr; Your PC, whenever there're any changes on Github)
 Your Git repo has been contributed by your friend, but your computer still doesn't have your friend's contribution, because you accepted your friend's pull request online and never downloaded the new changes onto your computer. In this case, you need to "pull" the up-to-date changes. 
 
-1. Go to your original repo folder on your computer (not the folked repo folder) using the `cd` command.
+1. Go to your original repo folder on your computer (not the forked repo folder) using the `cd` command.
 2. Type this:
 
 	```
