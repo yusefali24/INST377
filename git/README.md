@@ -26,7 +26,7 @@ Myeong Lee
 - Two developers are working on a software project. Developer A made changes in the code and published it to the server. The other developer B didn't know about this. He made his own changes and published it to the server. A's changes have gone since B didn't have A's changes on his laptop.
 	- Git keeps track of every change from each person, so B cannot ignore A's changes if they're using Git for the project. 
 - There is an open source project. Developer A is the organizer of the project. A made a main codebase and recruited other developers who wanted to contribute to the code. 1,000 people provided their own extensions to A, and A had a hard time reviewing all different kinds of codes. 
-	- Git has a mechanism called "folk". This allows other developers freely modify a project. Once a contributor finishes his or her work, it is possible to make a "pull request" to the project organizer so that the organizer can manage various contributions in a systematic way.  
+	- Git has a mechanism called "fork". This allows other developers freely modify a project. Once a contributor finishes his or her work, it is possible to make a "pull request" to the project organizer so that the organizer can manage various contributions in a systematic way.  
 - Student A was working on a software project. She finished two out of three assignments. Then she modified something to finish the last part. Suddenly, the whole system didn't work and the first two parts were also broken due to the latest change. It was very hard to go back to the state before starting working on the third part.
 	- Similar to the first example, Git keeps track of every code changes whenever a user "commit" his or her changes. It's very easy to go back to a previous state when something is broken.
 	- See [an example](https://github.com/myeong/DCIC-Human-Face/commits/master) of a commit history on Github.
@@ -47,7 +47,7 @@ We will use [Github](http://github.com) in this session since it is most widely 
 
 1. Branching
 	- For a Git repository, it's possible to make other branches so to keep the original codebase (useful when developing a particular feature while not wanting to break the original code).
-2. Folking
+2. Forking
 	- If you're interested in an existing (public) project by other users, you can "folk" the project to your account. This copies the entire project to your own account so you can work freely on it. 
 3. Basic Website
 	- Github provides a functionality that you can create a simple website that directly uses code on your Git repo.
@@ -199,7 +199,7 @@ It is possible to see graphically how your branching has been processed on the w
 Then, it shows how branches were created and merged among each other. 
 
 
-### Exercise: Folking and Contributing to the Original Code Base
+### Exercise: Forking and Contributing to the Original Code Base
 1. Go to this Git repo web page: `https://github.com/donalus/INST377`
 2. Click "Fork"
 3. Go to your forked repo. It should be something like `https://github.com/[your_id]/INST377`
@@ -230,7 +230,7 @@ Type `git remote add upstream https://github.com/donalus/INST377.git`
 For your own project, you normally use `commit` and `push` to manage your code, and you many not use other commands that much. However, Git is often used for collaboration with other colleagues. Let's do some exercises on collaborating with your friend. 
 
 1. Pair up with a colleague next to you. On the browser, go to your friend's Git repo page by typing your friend's Git repo URL. For example, you may go to `https://github.com/donalus/INST377`
-2. Click the "Folk" button at the top. 
+2. Click the "Fofk" button at the top. 
 3. Once you folk your friend's repo, you just copied your friend's precious project to your account. 
 4. Go to your folked repo page (you can see it in your repo list on your main Git page).
 5. Go to the terminal, get out of your original repo folder. For example: 
