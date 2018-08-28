@@ -200,9 +200,9 @@ Then, it shows how branches were created and merged among each other.
 
 
 ### Exercise: Folking and Contributing to the Original Code Base
-1. Go to this Git repo web page: `https://github.com/myeong/INST377`
-2. Click "Folk"
-3. Go to your folked repo. It should be something like `https://github.com/[your_id]/INST377`
+1. Go to this Git repo web page: `https://github.com/donalus/INST377`
+2. Click "Fork"
+3. Go to your forked repo. It should be something like `https://github.com/[your_id]/INST377`
 4. Clone it to your PC.
 5. Go to `git/introductions/` folder, and create a Markdown file with your last name. `[your_last_name].md`
 6. Open the file, write down any one sentence in the Markdown file, and save it. 
@@ -214,7 +214,7 @@ Then, it shows how branches were created and merged among each other.
 12. Now, your change has been applied to the original project repository.
 13. Check the registered Git addresses by typing `git remote -v`
 14. You want to pull the most recent changes to your local computer. In order to do that, your PC needs to know the address of the original repo. 
-Type `git remote add upstream https://github.com/myeong/INST377.git` 
+Type `git remote add upstream https://github.com/donalus/INST377.git` 
 15. Check again whether the original repo has been registered.
 	- `git remote -v`
 16. The original repo that you are contributing to is now registered on your local folder. 
@@ -229,7 +229,7 @@ Type `git remote add upstream https://github.com/myeong/INST377.git`
 ### Collaborating with your Colleague(s)
 For your own project, you normally use `commit` and `push` to manage your code, and you many not use other commands that much. However, Git is often used for collaboration with other colleagues. Let's do some exercises on collaborating with your friend. 
 
-1. Pair up with a colleague next to you. On the browser, go to your friend's Git repo page by typing your friend's Git repo URL. For example, you may go to `https://github.com/myeong/INST377`
+1. Pair up with a colleague next to you. On the browser, go to your friend's Git repo page by typing your friend's Git repo URL. For example, you may go to `https://github.com/donalus/INST377`
 2. Click the "Folk" button at the top. 
 3. Once you folk your friend's repo, you just copied your friend's precious project to your account. 
 4. Go to your folked repo page (you can see it in your repo list on your main Git page).
