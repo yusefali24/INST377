@@ -1,1 +1,1 @@
-Wow! Git is a fun program. 
+Wow! My first Git Hub experience and fun. 
