@@ -1,0 +1,120 @@
+<html>
+<head>
+	<style type="text/css">
+		#square {
+			margin-top: 20px;
+			margin-left: 100px;
+			height: 200px;
+			width: 200px;
+			background: orange;
+		}
+
+		div {
+			margin-bottom: 20px;
+		}
+
+		.round {
+			border-radius: 20px;
+		}
+
+		#square:hover{
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!-- <div id="square" onclick="showSentence()"></div> -->
+	<div id="square" onclick="trigger()"></div>
+
+	<div id="content_template" style="visibility: hidden;">
+		<h2 class="org_name">Organization Name</h2>
+		<p class="org_desc">description</p>
+		<ul>
+			<li class="org_type">Organizatin Type</li>
+			<li class="founding_year">Founding Year</li>
+			<li class="city">City</li>
+		</ul>
+
+	</div>
+
+	<div id="container">
+
+	</div>
+
+
+<script>
+/*
+function showSentence(){
+ 	var xhttp = new XMLHttpRequest();
+ 	xhttp.onreadystatechange = function() {
+ 		if (this.readyState == 4 && this.status == 200) {
+ 			document.getElementById("square").innerHTML = this.responseText;
+ 		}
+ 	};
+ 	xhttp.open("GET", "test.txt", true);
+ 	xhttp.send();
+}
+*/
+
+
+function trigger()
+{
+	//showSentence();
+	showSentence("json/data.json", test1);
+}
+
+function showSentence(url, func){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			func(this);
+		}
+	};
+	xhttp.open("GET", url, true);
+	xhttp.send();
+}
+
+function test1(xhttps){
+	//document.getElementById("square").innerHTML = xhttps.responseText;
+	var data = JSON.parse(xhttps.responseText);
+	if (data.length > 0) {
+		for (let i = 0; i < data.length; i++)
+		{
+			copyTemplate(data[i]);
+		}
+	}
+	else
+	{
+		alert("NO DATA");
+	}
+}
+
+function test2(xhttps){
+	document.getElementById("square").innerHTML = xhttps.responseText;
+	document.getElementById("square").style.color = "green";
+}
+
+function copyTemplate(org_obj) {
+	//var divTemp = document.getElementById("content_template");
+	var divTemp = document.createElement('div');
+	divTemp.setAttribute('class', 'organization');
+	//divCopy.style.visibility = "";
+
+	divTemp.innerHTML = "<h2 class=\'org_name\'></h2>";
+	divTemp.getElementsByClassName('org_name')[0].innerHTML = org_obj["Organization Name"];
+/*
+	divCopy.getElementsByClassName('org_desc')[0].innerHTML = org_obj.Description;
+	divCopy.getElementsByClassName('org_type')[0].innerHTML = org_obj["Organization Type"];
+	divCopy.getElementsByClassName('founding_year')[0].innerHTML = org_obj["Founding Year"];
+	divCopy.getElementsByClassName('city')[0].innerHTML = org_obj["City"];
+*/
+	document.getElementById('container').appendChild(divTemp);
+}
+
+</script>
+
+</body>
+</html>
