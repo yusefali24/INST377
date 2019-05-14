@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery JSON DEMO</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON(flickerAPI, {
+    tags: "testudo",
+    tagmode: "any",
+    format: "json"
+  }).done(function( data ) {
+     $.each( data.items, function( i, item ) {
+       $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+       if ( i === 3 ) {
+         return false;
+       }
+     });
+   });
+});
+</script>
+</head>
+<body>
+<div id='images'></div>
+</body>
+</html>

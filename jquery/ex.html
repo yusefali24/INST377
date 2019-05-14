@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>jQuery Example 1</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style type="text/css">
 
 	div{
-		margin: 0px 0px 0px 40px;	
-		font-size: 20px;	
+		margin: 0px 0px 0px 40px;
+		font-size: 20px;
 		width: 200px;
 	}
 
@@ -48,7 +50,7 @@
 		margin-top: 10px;
 	}
 
-	
+
 </style>
 <script>
 
@@ -60,7 +62,7 @@ $(document).ready(function(){
 		form_value = $("#form input").val();
 
 		$("td:contains("+ form_value+ ")").css("background", "red"); // finding an element based on contents
-		
+
 	})
 
 });
@@ -74,7 +76,7 @@ $(document).ready(function(){
 		<table>
 			<tr id="title">
 				<th> ID </th><th>Name</th><th>Age</th>
-			</tr>			
+			</tr>
 			<tr class="row">
 				<td> 1 </td><td>John Smith</td><td>20</td>
 			</tr>
@@ -83,17 +85,17 @@ $(document).ready(function(){
 			</tr>
 			<tr class="row">
 				<td> 3 </td><td>Kevin Williams</td><td>20</td>
-			</tr>		
+			</tr>
 		</table>
 	</div>
 	<div id="find">FIND</div>
 	<div>
 		<form id="form" name="form">
-			<input type="text" name="search" value="">
+			<input type="text" name="search" value="" />
 		</form>
 	</div>
 
-	
+
 
 </body>
 </html>

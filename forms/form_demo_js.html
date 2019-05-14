@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Demo</title>
+</head>
+<body>
+  <form id="my_form" method="post" action="form_processor.php">
+    <input type="text" id="first_name" name="first_name" required value="Default! Change Me!"/>
+    <br />
+    <input type="submit" name="submit" value="Save" />
+  </form>
+  <script>
+  function onSubmitListener(e) {
+    var first_name = document.getElementById('first_name').value;
+    if (first_name == '' || first_name == 'Default! Change Me!') {
+      alert('BAD DATA, BAD!');
+
+      e.preventDefault();
+    }
+  }
+  document.getElementById('my_form').addEventListener('submit', onSubmitListener);
+  </script>
+</body>
+</html>

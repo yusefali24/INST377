@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery JSON DEMO</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.getJSON("json/data.json", function( data ) {
+
+      $('<ul>').appendTo('#square');
+
+      for (let i = 0; i < data.length; i++)
+			{
+        $('<li>').html(data[i]['Organization Name']).appendTo('#square ul');
+			}
+
+    }).fail(function() {
+      console.log('SILLY THING DIDN\'T WORK');
+    }
+  ).done(function() {
+    console.log( "DONE!" );
+  }).always(function() {
+    console.log( "ALWAYS" );
+  });
+});
+</script>
+</head>
+<body>
+<div id='square'></div>
+</body>
+</html>

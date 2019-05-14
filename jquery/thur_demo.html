@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery JSON DEMO</title>
+<style type="text/css">
+  #target_div ul>li{
+    color: blue;
+  }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+// jQuery
+$(document).ready(function() {
+  $.getJSON("json/data.json").done(function( data ) {
+    $('<ul>').appendTo('#target_div');
+    for (let i = 0; i < data.length; i++)
+    {
+      $('<li>').html(data[i]['Organization Name']).appendTo('#target_div ul');
+      //$('#target_div').append(data[i]['Organization Name'] + ', ');
+    }
+  });
+});
+</script>
+</head>
+<body>
+  <div id='target_div'></div>
+</body>
+</html>

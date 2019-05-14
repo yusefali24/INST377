@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Demo</title>
+  <style>
+    #thingy {
+      color: blue;
+    }
+  </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+  //$('#thingy').hide();
+    console.log( "ready!" );
+    //$('#thingy').html('I CHANGED THIS WITH JQUERY!').fadeIn(10);
+    document.getElementById('thingy').innerHTML = "WOOT!";
+    $('#thingy').html('I DID A THING!').fadeOut(300);
+});
+
+</script>
+</head>
+<body>
+<div id="thingy"></div>
+</body>
+</html>

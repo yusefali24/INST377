@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form JavaScript Validation</title>
+    <script type="text/javascript">
+    function validateMyForm() {
+      var is_valid = true;
+      var first_name = document.getElementById('fname_ipt');
+      if (first_name.value == '' || first_name.value == 'First Name') {
+        alert("YOU NEED A FIRST NAME!");
+
+        is_valid =  false;
+      }
+      var scheduler = document.getElementById('scheduler_ipt');
+      var min_date = new Date('10/22/2018');
+      var picked_date = new Date(scheduler.value);
+      if (picked_date.getDay() > 4) {
+        alert("No Weekends!");
+        is_valid =  false;
+      }
+      alert('SUBMIT!');
+      return is_valid;
+    }
+    </script>
+</head>
+<body>
+  <div id="validation_feedback"></div>
+  <form method="post" action="form_processor.php" onsubmit="return validateMyForm()">
+    <input type="text" name="first_name" id="fname_ipt" value="First Name" />
+    <input type="date" name="scheduler" id="scheduler_ipt" min="10/22/2018" max="11/2/2018" />
+    <input type="submit" name="submit" value="Submit" />
+  </form>
+</body>
+</html>

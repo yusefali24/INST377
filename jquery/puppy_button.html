@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery JSON DEMO</title>
+<style type="text/css">
+  #puppy {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+  }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+   $('#puppy').click(function() {
+     console.log('CLICKED!');
+     $.getJSON(flickerAPI, {
+       tags: "puppy",
+       tagmode: "any",
+       format: "json"
+     }).done(function( data ) {
+       console.log(data.items[0].media.m);
+          $( "<img>" ).attr( "src", data.items[0].media.m ).appendTo( "#puppy" );
+        });
+    });
+});
+</script>
+</head>
+<body>
+<div id="puppy"></div>
+</body>
+</html>
